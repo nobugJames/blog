@@ -361,126 +361,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1211/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yangcan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="天生我材必有用">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/12/11/1211/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T17:20:02+08:00">
-                2018-12-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Markdown的基本用法"><a href="#Markdown的基本用法" class="headerlink" title="Markdown的基本用法"></a>Markdown的基本用法</h3><p><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">点击进去</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1212/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -604,7 +484,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1219.1/">
+    <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1211/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yangcan">
@@ -623,7 +503,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/12/11/1219.1/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/blog/2018/12/11/1211/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -675,137 +555,7 @@
       
         
           
-            <p>###PHP中include和require的区别</p>
-<p>include引入文件时，程序加载需要某个文件的内容时，include加载，程序每次执行代码读取不同的文件，或者通过一组文件来迭代，就可以使用include加载。require加载文件时，是在程序执行之前加载某个文件，而且被加载的内容是在程序中经常使用到的。<br>include引入文件的时候，如果碰到错误，会给出提示，并继续运行下边的代码。</p>
-<p>换句话说，如果想在丢失文件时停止处理页面，那就别犹豫了，用 require吧。include 就不是这样，脚本会继续运行</p>
-<p> require引入文件的时候，如果碰到错误，会给出提示，并停止运行下边的代码。<br> include是无条件引用<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if($lol)&#123;</span><br><span class="line">   include(&apos;hello.php&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  //如果if为真则加载hello.php文件，假则不加载</span><br><span class="line">  </span><br><span class="line">  if($lol)&#123;</span><br><span class="line">   require(&apos;hello.php&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  //无论if真假都可以加载文件</span><br></pre></td></tr></table></figure></p>
-<p>   <em>迭代过程中的引用</em><br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$i=1;</span><br><span class="line">while($i&lt;3)&#123;</span><br><span class="line">         require(&quot;hello&quot;.$i.&quot;.php&quot;);</span><br><span class="line">         $i++</span><br><span class="line">&#125;</span><br><span class="line">//每一次循环的时候，程序都将把同一个文件hello1.php引用进去</span><br><span class="line">$i=1;</span><br><span class="line">while($i&lt;3)&#123;</span><br><span class="line">         include(&quot;hello&quot;.$i.&quot;.php&quot;);</span><br><span class="line">         $i++;</span><br><span class="line">&#125;</span><br><span class="line">//每次循环则引用不同的文件</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1225/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yangcan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="天生我材必有用">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/12/11/1225/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T17:20:02+08:00">
-                2018-12-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="数据库的锁"><a href="#数据库的锁" class="headerlink" title="数据库的锁"></a>数据库的锁</h3><p>加锁是实现数据库并发控制的一个非常重要的技术。</p>
-<p>1.共享锁-又称读锁，是读取操作创建的锁，其他用户可以并发的读取数据，但是其他事务都不能进行修改，直至已经释放所有的共享锁，如果事务T已经对数据A加上共享锁后，其他事务只能再对A加上共享锁，不能加排它锁。获准共享锁的事务只能读取数据，不能修改数据。</p>
-<p>用法：<br>SELECT TABLE LOCK IN SHARE MODE;</p>
-<p>在查询语句后加上 LOCK IN SHARE MIDE ,mysql会对查询结果中的每一行都加共享锁，当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请共享锁，否则将会被阻塞，其他线程也可以读取共享锁的表，而且这些线程读取的是同一版本的数据。</p>
-<p>2.排他锁-又称写锁，如果事务T对数据A加上排他锁后，则其他事务不能再对A加任任何类型的封锁。获准排他锁的事务既能读数据，又能修改数据。</p>
-<p>用法：SELECT TABLE FOR UPDATE;</p>
-<p>在查询语句后加上FOR UPDATE ，MySQL会对查询结果集中每一行都会加上排他锁，当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请排他锁，否则会被阻塞。</p>
+            <h3 id="Markdown的基本用法"><a href="#Markdown的基本用法" class="headerlink" title="Markdown的基本用法"></a>Markdown的基本用法</h3><p><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">点击进去</a></p>
 
           
         
@@ -979,6 +729,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1219.1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yangcan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天生我材必有用">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/12/11/1219.1/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T17:20:02+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###PHP中include和require的区别</p>
+<p>include引入文件时，程序加载需要某个文件的内容时，include加载，程序每次执行代码读取不同的文件，或者通过一组文件来迭代，就可以使用include加载。require加载文件时，是在程序执行之前加载某个文件，而且被加载的内容是在程序中经常使用到的。<br>include引入文件的时候，如果碰到错误，会给出提示，并继续运行下边的代码。</p>
+<p>换句话说，如果想在丢失文件时停止处理页面，那就别犹豫了，用 require吧。include 就不是这样，脚本会继续运行</p>
+<p> require引入文件的时候，如果碰到错误，会给出提示，并停止运行下边的代码。<br> include是无条件引用<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if($lol)&#123;</span><br><span class="line">   include(&apos;hello.php&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  //如果if为真则加载hello.php文件，假则不加载</span><br><span class="line">  </span><br><span class="line">  if($lol)&#123;</span><br><span class="line">   require(&apos;hello.php&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  //无论if真假都可以加载文件</span><br></pre></td></tr></table></figure></p>
+<p>   <em>迭代过程中的引用</em><br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$i=1;</span><br><span class="line">while($i&lt;3)&#123;</span><br><span class="line">         require(&quot;hello&quot;.$i.&quot;.php&quot;);</span><br><span class="line">         $i++</span><br><span class="line">&#125;</span><br><span class="line">//每一次循环的时候，程序都将把同一个文件hello1.php引用进去</span><br><span class="line">$i=1;</span><br><span class="line">while($i&lt;3)&#123;</span><br><span class="line">         include(&quot;hello&quot;.$i.&quot;.php&quot;);</span><br><span class="line">         $i++;</span><br><span class="line">&#125;</span><br><span class="line">//每次循环则引用不同的文件</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1219/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1052,6 +926,132 @@
           
             <p>###PHP面向对象多态<br> 因为接口的方法实现有很多种，所以对于接口里面的定义的方法的具体实现是多种多样的，这种特性成为多态-</p>
 <p> 比如接口A有两个实现B和C，B和C对A里面的定义的方法都可以实现可以是不同的，这种现象是不同的。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/blog/blog/2018/12/11/1225/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yangcan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天生我材必有用">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/12/11/1225/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T17:20:02+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="数据库的锁"><a href="#数据库的锁" class="headerlink" title="数据库的锁"></a>数据库的锁</h3><p>加锁是实现数据库并发控制的一个非常重要的技术。</p>
+<p>1.共享锁-又称读锁，是读取操作创建的锁，其他用户可以并发的读取数据，但是其他事务都不能进行修改，直至已经释放所有的共享锁，如果事务T已经对数据A加上共享锁后，其他事务只能再对A加上共享锁，不能加排它锁。获准共享锁的事务只能读取数据，不能修改数据。</p>
+<p>用法：<br>SELECT TABLE LOCK IN SHARE MODE;</p>
+<p>在查询语句后加上 LOCK IN SHARE MIDE ,mysql会对查询结果中的每一行都加共享锁，当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请共享锁，否则将会被阻塞，其他线程也可以读取共享锁的表，而且这些线程读取的是同一版本的数据。</p>
+<p>2.排他锁-又称写锁，如果事务T对数据A加上排他锁后，则其他事务不能再对A加任任何类型的封锁。获准排他锁的事务既能读数据，又能修改数据。</p>
+<p>用法：SELECT TABLE FOR UPDATE;</p>
+<p>在查询语句后加上FOR UPDATE ，MySQL会对查询结果集中每一行都会加上排他锁，当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请排他锁，否则会被阻塞。</p>
 
           
         
